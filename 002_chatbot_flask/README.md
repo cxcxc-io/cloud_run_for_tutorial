@@ -44,7 +44,7 @@ pip3 install -r requirements.txt
 
 ```
 "python.autoComplete.extraPaths": [
-    "/home/USER_NAME/cloud_run_for_tutorial/001_flask/venv venv_002_chatbot_flask/lib/python3.7/site-packages/"
+    "/home/USER_NAME/cloud_run_for_tutorial/002_chatbot_flask/venv_002_chatbot_flask/lib/python3.7/site-packages/"
 ]
 ```
 
