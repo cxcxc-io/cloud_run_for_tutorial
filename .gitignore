@@ -1,1 +1,4 @@
 .theia
+.vscode
+001_flask/venv_*
+002_chatbot_flask/venv_*
