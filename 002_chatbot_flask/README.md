@@ -28,7 +28,7 @@ sudo apt-get install -y python3-venv
 # 建置虛擬環境
 python3 -m venv venv_002_chatbot_flask
 # 指定虛擬環境
-source venv venv_002_chatbot_flask/bin/activate
+source venv_002_chatbot_flask/bin/activate
 # 安裝套件
 pip3 install -r requirements.txt
 
