@@ -1,0 +1,4 @@
+wheel
+grpcio
+google-cloud-firestore
+mock
