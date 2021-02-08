@@ -1,6 +1,3 @@
-import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "fake.json"
-
 from flask import Flask, request, abort
 from src.controllers.user_controller import UserController
 from flask_cors import CORS
