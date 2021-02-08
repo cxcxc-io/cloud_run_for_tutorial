@@ -9,7 +9,7 @@ class User(object):
     
     @staticmethod
     def from_dict(source) -> User :
-        user=User(name=source[u'name'],age=source[u'int'],user_id=source[u'user_id'])
+        user=User(name=source[u'name'],age=source[u'age'],user_id=source[u'user_id'])
         return user
 
     def to_dict(self):
