@@ -16,6 +16,12 @@ import os
 
 from daos.user_dao import UserDAO
 
+# 圖片下載與上傳專用
+import urllib.request
+from google.cloud import storage
+
+
+
 class UserService:
 
     line_bot_api = LineBotApi(channel_access_token=os.environ["LINE_CHANNEL_ACCESS_TOKEN"])
@@ -46,6 +52,17 @@ class UserService:
         )
 
         # 取得用戶照片，存放回cloud storage，並將連結存回user的連結
+        if user.line_user_pic_url is not None:
+            file_name = user.line_user_id+'.jpg'
+            urllib.request.urlretrieve(user.line_user_pic_url, file_name)
+            storage_client = storage.Client()
+            bucket_name = os.environ['USER_INFO_GS_BUCKET_NAME']
+            destination_blob_name=f'{user.line_user_id}/user_pic.png'
+            bucket = storage_client.bucket(bucket_name)
+            blob = bucket.blob(destination_blob_name)
+            blob.upload_from_filename(file_name)
+            destination_url=f'https://storage.googleapis.com/{bucket_name}/{user.line_user_id}/user_pic.png'
+            user.line_user_pic_url= destination_url
 
 
         # 存入資料庫

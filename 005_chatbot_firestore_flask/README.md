@@ -33,6 +33,7 @@ export FIRESTORE_EMULATOR_HOST_PATH=localhost:8080/firestore
 export FIRESTORE_HOST=http://localhost:8080
 export LINE_CHANNEL_ACCESS_TOKEN=""
 export LINE_CHANNEL_SECRET=""
+export USER_INFO_GS_BUCKET_NAME=""
 ```
 
 ### 啟動ngrok，並將生成的連結貼回Line Console
