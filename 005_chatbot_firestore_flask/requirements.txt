@@ -1,0 +1,6 @@
+wheel
+grpcio
+google-cloud-firestore
+flask
+flask_cors
+line-bot-sdk

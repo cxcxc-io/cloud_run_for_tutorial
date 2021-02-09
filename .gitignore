@@ -5,3 +5,4 @@
 */venv_*
 */.theia
 */.vscode
+*/*/__pycache__
